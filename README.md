@@ -142,8 +142,8 @@ One configured to target a local edge and one configured to target an edge throu
  - To authenticate:
    - Browse to the endpoint POST /api/v1/ontology/authentication
    - From the result extract the token
-   - Click on the Locker icon and set in the text field
-     - Bearer `access-token` (where access-token is the valid result from the previous authentication request)
+   - Click on the `Authorize` button
+     - set in the text field, "Bearer `access-token`" (where access-token is the valid result from the previous authentication request)
      - Press `Authorize` to register 
  - You can then select other endpoints to test them
 
