@@ -138,7 +138,7 @@ One configured to target a local edge and one configured to target an edge throu
 ## Local environment
 
  - When using a local Building edge a swagger is directly embedded in the device
- - The swagger is accessible from http://<ipaddress>/swagger
+ - The swagger is accessible from `http://ipaddress/swagger`
  - To authenticate:
    - Browse to the endpoint POST /api/v1/ontology/authentication
    - From the result extract the token
@@ -166,6 +166,6 @@ If you want to use a swagger editor locally to perform the tests you will need t
       npm install
       npm start
   ```
- - Navigate to http://localhost:3000/
+ - Navigate to `http://localhost:3000/`
  - Click on Authorize
  - Then you can then select other endpoints to test them
