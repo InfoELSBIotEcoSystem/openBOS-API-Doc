@@ -107,7 +107,7 @@ One configured to target a local edge and one configured to target an edge throu
  - Select the imported collection
  - Click on `...` and select `Edit`
  - Navigates to the Variables definition tab
- - Change the `{{baseUrl}}` to the address of your edge locally accessible
+ - Change the `{{baseUrl}}` to the address of your Building edge locally accessible
  - Select the route POST - Get Authentication token
    - Edit the body and set your credentials
    - Press Send
@@ -116,23 +116,56 @@ One configured to target a local edge and one configured to target an edge throu
 
 ## Cloud environment
 
- <a href="assets/openbos-documentation/static/images/openBOS Ontology Cloud Api.postman_collection.json" target="_blank">Download openBOS Postman API collection for cloud</a>
-
- - Retrieve the gwid of your edge from the cloud portal
+ - Collect the `gwid` of your Building edge from the cloud portal
    - Connect to <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a>
    - Click on the detail of an edge to extract its unique identifier (aka: `gwid`)
- - Open Postman and import the collection
+ - Collect the client_id of your application declared in <a href="https://developers.connect.abb.com/application" target="_blank">https://developers.connect.abb.com/application</a>
+ - Configure your Application to have the Single Page Application set to `https://oauth.pstmn.io/v1/callback`
+ - Open Postman and import the collection <a href="assets/openbos-documentation/static/images/openBOS Ontology Cloud Api.postman_collection.json" target="_blank">Download openBOS Postman API collection for cloud</a>
  - Select the new imported collection
  - Click on `...` and select `Edit`
    - Select the `Authorization` tab
-   - Set the Client ID to the one that matches the application you have created in the cloud developer portal. (Refers to documentation "How to connect a SmartEdge openBOS device to ABB cloud and get ready to using the open APIs?" for more details)
+   - Set the client_id to the one you previously collect
    - Select the Variable tab
    - Set the `gwid` to the id you retrieved from the step above.
    - Comeback to the `Authorization` tab
    - Scroll down and press `Get New Access Token`
    - Follow the authentication step
- - You can then select other routes to test them
+ - You can then select other endpoints to test them
 
 # Swagger environment
 
- - Work in progress
+## Local environment
+
+ - When using a local Building edge a swagger is directly embedded in the device
+ - The swagger is accessible from http://<ipaddress>/swagger
+ - To authenticate:
+   - Browse to the endpoint POST /api/v1/ontology/authentication
+   - From the result extract the token
+   - Click on the Locker icon and set in the text field
+     - Bearer `access-token` (where access-token is the valid result from the previous authentication request)
+     - Press `Authorize` to register 
+ - You can then select other endpoints to test them
+
+## Cloud environment
+
+ - The swagger is accessible from [there](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/InfoELSBIotEcoSystem/openBOS-API-Doc/main/assets/openbos-documentation/static/images/openBOS-swagger.json)
+ - As the swagger editor does not support PKCE out-of-the-box this display will be for reference only
+
+If you want to use a swagger editor locally to perform the tests you will need to follow these steps:
+ - Collect the `gwid` of your Building edge from the cloud portal
+   - Connect to <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a>
+   - Click on the detail of an edge to extract its unique identifier (aka: `gwid`)
+ - Collect the client_id of your application declared in <a href="https://developers.connect.abb.com/application" target="_blank">https://developers.connect.abb.com/application</a>
+ - Configure your Application to have the Single Page Application set to `http://localhost:3000/oauth2-redirect.html`
+
+ - Download [swagger-ui](/assets/openbos-documentation/static/images/swagger-ui-PKCE.zip)
+ - Extract it to a local folder
+ - Starts a command-line
+  ```bash
+      npm install
+      npm start
+  ```
+ - Navigate to http://localhost:3000/
+ - Click on Authorize
+ - Then you can then select other endpoints to test them
