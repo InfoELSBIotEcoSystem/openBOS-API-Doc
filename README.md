@@ -2,12 +2,14 @@
 # Table of contents
 - Prerequisites
   - [How to connect a Building edge openBOS&reg; device to ABB cloud and get ready to using the open APIs?](#how-to-connect-a-building-edge-openbos-device-to-abb-cloud-and-get-ready-to-using-the-open-apis)
-- Access openBOS API via cloud
-  - [Postman environment](#postman-environment)
-  - [Swagger environment](#swagger-environment)
-- Access openBOS from local network
-  - [Postman environment](#postman-environment)
-  - [Swagger environment](#swagger-environment)
+- [Access openBOS API via cloud](#access-openbos-api-via-cloud)
+  - [Create a new application in the ABB Developer Portal](#create-a-new-application-in-the-abb-developer-portal)
+  - [Postman environment for cloud](#postman-environment-for-cloud)
+  - [Swagger environment](#swagger-environment-for-cloud)
+- [Direct access openBOS API on local network](#direct-access-openbos-api-on-local-network)
+  - [Introduction](#introduction)
+  - [Postman environment for local access](#postman-environment-for-local-access)
+  - [Swagger environment for local access](#swagger-environment-for-local-access)
 - Concept
   - [One app for local and cloud use](content/30_concept/010_uniqueApp.md)
   - [Basic objects](content/30_concept/10_basicObjects.md)
@@ -147,7 +149,7 @@ If you want to use a swagger editor locally to perform the tests you will need t
  - On a local network the SmartEdge API is accessible through `http://ipaddress`
  - The local authentication scheme is using login-password with then further usage of Bearer json token
 
-## Postman environment
+## Postman environment for local access
 
  <a href="assets/openbos-documentation/static/images/openBOS Ontology Local Api.postman_collection.json" target="_blank">Download openBOS Postman API collection for local</a>
 
@@ -162,7 +164,7 @@ If you want to use a swagger editor locally to perform the tests you will need t
      - If OK then the token will be stored for subsequent calls
  - You can then select other routes to test them
 
-# Swagger environment
+## Swagger environment for local access
 
  - When using a local Building edge a swagger is directly embedded in the device
  - The swagger is accessible from `http://ipaddress/swagger`
