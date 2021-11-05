@@ -143,6 +143,10 @@ If you want to use a swagger editor locally to perform the tests you will need t
 
 # Direct access openBOS API on local network
 
+## Introduction
+ - On a local network the SmartEdge API is accessible through `http://ipaddress`
+ - The local authentication scheme is using login-password with then further usage of Bearer json token
+
 ## Postman environment
 
  <a href="assets/openbos-documentation/static/images/openBOS Ontology Local Api.postman_collection.json" target="_blank">Download openBOS Postman API collection for local</a>
