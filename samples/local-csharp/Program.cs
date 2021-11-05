@@ -50,12 +50,45 @@ namespace CSHttpClientSample
     static class Program
     {
         static string bearerToken = "";
-        static string baseUrl = "http://192.168.3.74";
+        static string baseUrl = "";
+        static string password = "";
+        static string login = "";
         static void Main(string[] args)
         {
+            if ( args.Contains("-?")){
+                System.Console.WriteLine("Exemple:");
+                System.Console.WriteLine("      csharp-tutorial http://abcdef -l Admin -p adminpassword");
+                Console.ReadKey();
+                return;
+            }
+
+            if ( args!=null&& args?.Length>0 ){
+                baseUrl = args[0];
+                for (int i = 1; i < args.Length; i++)
+                {
+                    if ( args[i].ToUpper() == "-P")                
+                        password = args.Length>=i+1?args[i+1]:"";
+                    else if ( args[i].ToUpper() == "-L")
+                        login = args.Length>=i+1?args[i+1]:"";
+                }
+            }
+
+            if ( string.IsNullOrEmpty(baseUrl)) {
+                System.Console.WriteLine("Missing baseUrl");
+                return;
+            }
+            if ( string.IsNullOrEmpty(login)) {
+                System.Console.WriteLine("Missing Login");
+                return;
+            }
+            if ( string.IsNullOrEmpty(password)) {
+                System.Console.WriteLine("Missing Password");
+                return;
+            }
+
             Task.Run(() =>
             {
-                MainMain();
+                AsyncMain();
             });
 
             Console.ReadKey();
@@ -67,8 +100,8 @@ namespace CSHttpClientSample
 
             Dictionary<string, string> body = new Dictionary<string, string>
             {
-                ["login"] = "Admin",
-                ["password"] = "Admin@azerty0"
+                ["login"] = login,
+                ["password"] = password
             };
 
             var request = new RestRequest($"{baseUrl}/api/authentication", Method.POST, DataFormat.Json);
@@ -87,7 +120,7 @@ namespace CSHttpClientSample
                     webBuilder.UseStartup<Startup>();
                 });
 
-        static async void MainMain()
+        static void AsyncMain()
         {
             var client = GetRestSharpClient();
 
