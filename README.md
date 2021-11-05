@@ -2,11 +2,11 @@
 # Table of contents
 - Prerequisites
   - [How to connect a Building edge openBOS&reg; device to ABB cloud and get ready to using the open APIs?](#how-to-connect-a-building-edge-openbos-device-to-abb-cloud-and-get-ready-to-using-the-open-apis)
-- [Access openBOS API via cloud](#access-openbos-api-via-cloud)
+- [Accessing building edge via cloud](#access-openbos-api-via-cloud)
   - [Create a new application in the ABB Developer Portal](#create-a-new-application-in-the-abb-developer-portal)
   - [Postman environment for cloud](#postman-environment-for-cloud)
   - [Swagger environment](#swagger-environment-for-cloud)
-- [Direct access openBOS API on local network](#direct-access-openbos-api-on-local-network)
+- [Accessing building edge on local network](#direct-access-openbos-api-on-local-network)
   - [Introduction](#introduction)
   - [Postman environment for local access](#postman-environment-for-local-access)
   - [Swagger environment for local access](#swagger-environment-for-local-access)
