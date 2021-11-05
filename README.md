@@ -2,7 +2,10 @@
 # Table of contents
 - Prerequisites
   - [How to connect a Building edge openBOS&reg; device to ABB cloud and get ready to using the open APIs?](#how-to-connect-a-building-edge-openbos-device-to-abb-cloud-and-get-ready-to-using-the-open-apis)
-- Environment
+- Access openBOS API via cloud
+  - [Postman environment](#postman-environment)
+  - [Swagger environment](#swagger-environment)
+- Access openBOS from local network
   - [Postman environment](#postman-environment)
   - [Swagger environment](#swagger-environment)
 - Concept
@@ -66,6 +69,8 @@ Visit <a href="https://buildings.ability.abb/portfolio" target="_blank">https://
 
 Here you find your openBOS&reg; Building edge / gateway and you may configure and manage it.
 
+# Access openBOS API via cloud
+
 ## Create a new application in the ABB Developer Portal
 Log into the ABB Developer Portal with your myABB credentials
  - <a href="https://developers.connect.abb.com/getting-started" target="_blank">https://developers.connect.abb.com/getting-started</a>
@@ -94,27 +99,7 @@ Log into the ABB Developer Portal with your myABB credentials
 
 Start using your first calls to get data from openBOS&reg;.
 
-# Postman environment
-
-You will find below Postman environments.
-One configured to target a local edge and one configured to target an edge through the cloud.
-
-## Local environment
-
- <a href="assets/openbos-documentation/static/images/openBOS Ontology Local Api.postman_collection.json" target="_blank">Download openBOS Postman API collection for local</a>
-
- - Open Postman and import the collection
- - Select the imported collection
- - Click on `...` and select `Edit`
- - Navigates to the Variables definition tab
- - Change the `{{baseUrl}}` to the address of your Building edge locally accessible
- - Select the route POST - Get Authentication token
-   - Edit the body and set your credentials
-   - Press Send
-     - If OK then the token will be stored for subsequent calls
- - You can then select other routes to test them
-
-## Cloud environment
+## Postman environment for cloud
 
  - Collect the `gwid` of your Building edge from the cloud portal
    - Connect to <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a>
@@ -133,21 +118,7 @@ One configured to target a local edge and one configured to target an edge throu
    - Follow the authentication step
  - You can then select other endpoints to test them
 
-# Swagger environment
-
-## Local environment
-
- - When using a local Building edge a swagger is directly embedded in the device
- - The swagger is accessible from `http://ipaddress/swagger`
- - To authenticate:
-   - Browse to the endpoint POST /api/v1/ontology/authentication
-   - From the result extract the token
-   - Click on the `Authorize` button
-     - set in the text field, "Bearer `access-token`" (where access-token is the valid result from the previous authentication request)
-     - Press `Authorize` to register 
- - You can then select other endpoints to test them
-
-## Cloud environment
+## Swagger environment for cloud
 
  - The swagger is accessible from [there](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/InfoELSBIotEcoSystem/openBOS-API-Doc/main/assets/openbos-documentation/static/images/openBOS-swagger.json)
  - As the swagger editor does not support PKCE out-of-the-box this display will be for reference only
@@ -169,3 +140,33 @@ If you want to use a swagger editor locally to perform the tests you will need t
  - Navigate to `http://localhost:3000/`
  - Click on Authorize
  - Then you can then select other endpoints to test them
+
+# Direct access openBOS API on local network
+
+## Postman environment
+
+ <a href="assets/openbos-documentation/static/images/openBOS Ontology Local Api.postman_collection.json" target="_blank">Download openBOS Postman API collection for local</a>
+
+ - Open Postman and import the collection
+ - Select the imported collection
+ - Click on `...` and select `Edit`
+ - Navigates to the Variables definition tab
+ - Change the `{{baseUrl}}` to the address of your Building edge locally accessible
+ - Select the route POST - Get Authentication token
+   - Edit the body and set your credentials
+   - Press Send
+     - If OK then the token will be stored for subsequent calls
+ - You can then select other routes to test them
+
+# Swagger environment
+
+ - When using a local Building edge a swagger is directly embedded in the device
+ - The swagger is accessible from `http://ipaddress/swagger`
+ - To authenticate:
+   - Browse to the endpoint POST /api/v1/ontology/authentication
+   - From the result extract the token
+   - Click on the `Authorize` button
+     - set in the text field, "Bearer `access-token`" (where access-token is the valid result from the previous authentication request)
+     - Press `Authorize` to register 
+ - You can then select other endpoints to test them
+
