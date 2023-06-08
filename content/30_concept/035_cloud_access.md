@@ -1,4 +1,7 @@
-# Accessing a Building edge via the Cloud API
+# Listing and accessing my BuildingEdge via the Cloud API
+
+## Introduction
+
 The Building Ecosystem cloud platform offers the functionality to manage the access to the collection of  Building edge devices the different users of the platform have access to.
 The respective service for managing relations between users and the connected Building edge devices is called Ownership Service which exposes an API that allows an authenticated user to query for the Building edge devices that it has access to. 
 For this purpose, the Ownership Service maintains a table of user-to-Building edge relations.
@@ -6,6 +9,10 @@ A user in this context is identified by its unique email address that was used w
 The Building edge device is identified by its GUID that it has obtained during the manufacturing process from the ABB Ability PKI.
 For creating a relation between a user identified via its email address and a  Building edge device, the  Building edge configuration tool needs to be used. 
 For each local Building edge user account the option for "cloud access" can be activated and once the respective user email address has been entered, the Building edge device will automatically sync this information with the Ownership service, hereby creating a new user-Building edge relation.
+
+## Prerequisite
+
+For following calls you need to be authenticated as explained in the previous chapter <a href="030_authentication.md" target="_blank">Connection and authentication</a>.
 
 ## Ownership Service API
 The API of the ownership service can be reached via the following URL:

@@ -28,7 +28,7 @@
 |Oauth 2.0||An open standard for access delegation used for granting users access to internet applications while withholding their passwords.|
 |Ontology||A semantic information model of a system with its properties and relations.|
 |openBOS&reg;||Building Operating System, a middleware infrastructure for unifying devices, brands, and networks<br/> by adding an abstraction layer between the hardware devices and the building automation application.|
-|Proof Key for Code Exchange|PKCE|A security extension to the authentication mechanism OAuth 2.0 for public clients<br/> on mobile devices, designed to ensure that the client app that is starting the authentication process is actually the owner of the respective ClientId.|
+|Proof Key for Code Exchange|PKCE|A security extension to the authentication mechanism OAuth 2.0 for public clients<br/> on mobile devices, designed to ensure that the client app that is starting <br/>the authentication process is actually the owner of the respective ClientId.|
 |Property||Collection of buildings in one single physical location.|
 |Property Datapoint||Datapoint which holds a characteristic of a device in a database (in opposite to a field datapoint).|
 |Public Key Infrastructure|PKI|Set of hardware, software, rules and processes to allow the secure transfer of <br/>digital information using cryptographic services.|

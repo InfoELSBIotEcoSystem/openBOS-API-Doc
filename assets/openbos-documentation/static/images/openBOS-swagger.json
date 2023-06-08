@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "servers": [
     { 
-      "url": "https://api.electrification.ability.abb/buildings/openbos/apiproxy/v1/gateway/{gwid}",
+      "url": "https://api.electrification.ability.abb/buildings/openbos/apiproxy/v1/{gwid}",
       "description":"Cloud endpoint",
       "variables":{
         "gwid":{

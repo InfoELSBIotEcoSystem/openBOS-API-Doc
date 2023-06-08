@@ -1,4 +1,3 @@
 # References
 
-
-The following chapters give an overview of the objects and tags.
+The following chapters gives link to some extra references or tool.

@@ -1,8 +1,6 @@
-# Single app for local and cloud use
+# Unique app for local and cloud use
 
-
-openBOS&reg; offers a single API that may run locally on the Building edge as well as within the ABB Ability&trade; Cloud. You as a developer only need to develop a single application 
-on the top of the openBOS&reg; API.
+openBOS&reg; offers a single API that may run locally on the Building edge as well as within the ABB Ability&trade; Cloud. You as a developer only need to develop a single application on the top of the openBOS&reg; API.
 
 Afterwards, the customers have several options to deploy and run their application:
 -	 Locally on the Building edge device, connecting locally with the openBOS&reg; API.
@@ -13,3 +11,5 @@ The authentication only changes when the customers deploy their applications:
 -	Within their own cloud which connects to the ABB Ability&trade; Cloud API. In this case, they use secure OAuth authentication. 
 
 This API documentation refers mostly to the cloud solution, but also covers the majority of the local API use cases.
+
+

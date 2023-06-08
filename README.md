@@ -2,45 +2,44 @@
 # Table of contents
 - Prerequisites
   - [How to connect a Building edge openBOS&reg; device to ABB cloud and get ready to using the open APIs?](#how-to-connect-a-building-edge-openbos-device-to-abb-cloud-and-get-ready-to-using-the-open-apis)
-- [Accessing building edge via cloud](#access-openbos-api-via-cloud)
-  - [Create a new application in the ABB Developer Portal](#create-a-new-application-in-the-abb-developer-portal)
-  - [Postman environment for cloud](#postman-environment-for-cloud)
-  - [Swagger environment](#swagger-environment-for-cloud)
-- [Accessing building edge on local network](#direct-access-openbos-api-on-local-network)
-  - [Introduction](#introduction)
-  - [Postman environment for local access](#postman-environment-for-local-access)
-  - [Swagger environment for local access](#swagger-environment-for-local-access)
+- Environment
+  - [Postman environment](#postman-environment)
+  - [Swagger environment](#swagger-environment)
 - Concept
   - [One app for local and cloud use](content/30_concept/010_uniqueApp.md)
-  - [Basic objects](content/30_concept/10_basicObjects.md)
   - [Several levels of accessibility](content/30_concept/020_accessLevel.md)
   - [Accessing a Building edge via the Cloud API](content/30_concept/035_cloud_access.md)
   - [Connection and authentication](content/30_concept/030_authentication.md)
   - [Tags: a core concept to understand](content/30_concept/040_tags.md)
-  - [Basic rules for API endpoints and DTOs](content/30_concept/050_routes.md)
-  - [Users objects](content/30_concept/060_usersObjects.md)
-  - [A pure template concept](content/30_concept/120_template.md)
+  - [Basic objects](content/30_concept/050_basicObjects.md)
   - Property objects
-    - [Building space ontology concept](content/30_concept/070_buildingSpace.md)
-    - [Building asset management](content/30_concept/080_buildingAsset.md)
-    - [Building Datapoints management](content/30_concept/090_datapoints.md)
-  - [Physical device management](content/30_concept/100_physicalDevice.md)
-  - [Handle automation functions](content/30_concept/110_automation.md)
+    - [Building space ontology concept](content/40_mainObjects/070_buildingSpace.md)
+    - [Building asset management](content/40_mainObjects/080_buildingAsset.md)
+    - [Building Datapoints management](content/40_mainObjects/090_datapoints.md)
+  - [Physical device management](content/40_mainObjects/100_physicalDevice.md)
+  - [Handle automation functions](content/40_mainObjects/110_automation.md)
+    - [Alarm functions](content/40_mainObjects/111_alarms.md)
+    - [Handle automation functions](content/40_mainObjects/112_trends.md)
+    - [Handle automation functions](content/40_mainObjects/113_schedules.md)
   - [Event driven subscription to prevent from polling](content/30_concept/130_eventDriven.md)   
+  - [Advanced filtering for collections](content/40_mainObjects/140_advancedFiltering.md)   
 - Samples
-  - [How to authenticate from cloud](content/40_samples/10_authenticateToCloud.md)
-  - [How to display property users?](content/40_samples/20_checkUsers.md)
-  - [How to get information on the property?](content/40_samples/30_discoverProperty.md)
-  - [Switch on lights of a specific office in a building?](content/40_samples/40_switchOnLights.md)
-  - [How to read a DataPoint ?](content/40_samples/60_manageDatapoints.md#how-to-read-a-datapoint)
-  - [How to write a DataPoint value ?](content/40_samples/60_manageDatapoints.md#how-to-write-a-datapoint-value)
-  - [How do I subscribe to any datapoint value change ?](content/40_samples/60_manageDatapoints.md#how-do-i-subscribe-to-any-datapoint-value-change)
-  - [How do I manage alarms ?](content/40_samples/50_manageAlarms.md)
-  - [How do I read trend value ?](content/40_samples/70_manageTrends.md)
+  - [How to authenticate from cloud](content/50_samples/10_authenticateToCloud.md)
+  - [How to display property users?](content/50_samples/20_checkUsers.md)
+  - [How to get information on the property?](content/50_samples/30_discoverProperty.md)
+  - [How to get buildings available in a property?](content/50_samples/30_discoverProperty.md#how-to-get-buildings-available-in-a-property)
+  - Datapoints
+    - [The different type of datapoint](content/50_samples/40_manageDatapoints.md#the-different-type-of-datapoint)
+    - [How to read a DataPoint ?](content/50_samples/40_manageDatapoints.md#how-to-read-a-datapoint)
+    - [How to write a DataPoint value ?](content/50_samples/40_manageDatapoints.md#how-to-write-a-datapoint-value)
+  - [How do I subscribe to any datapoint value change ?](content/50_samples/40_manageDatapoints.md#how-do-i-subscribe-to-any-datapoint-value-change)
+  - [Switch on lights of a specific office in a building?](content/50_samples/50_switchOnLights.md)
+  - [How do I manage alarms ?](content/50_samples/60_manageAlarms.md)
+  - [How do I read trend value ?](content/50_samples/70_manageTrends.md)
+  - [How do I manage schedulers ?](content/50_samples/80_manageSchedulers.md)
 - References
-  - [Ontology basics objects](content/60_references/10_basicObjects.md)
-  - [Ontology Template objects](content/60_references/20_templateObjects.md)
-  - [Ontology Instances objects](content/60_references/30_instancesObjects.md)
+  - [Postman environment](content/60_references/10_postman.md)
+  - [Ontology Instances objects](content/60_references/30_schemas.md)
   - [Ontology users objects](content/60_references/40_usersObjectsTags.md)
   - [Ontology building spaces](content/60_references/50_buildingSpacesTags.md)
   - [Ontology datapoints objects](content/60_references/60_datapointsTags.md)
@@ -48,7 +47,7 @@
 - Appendix
   - [Glossary](content/70_appendix/10_glossary.md)
 
-# How to connect a Building edge openBOS device to ABB cloud and get ready to using the open APIs?
+# How to connect to a Building edge?
 
 ## Prerequisites
 These steps have to be performed before starting to use the openBOS&reg; APIs:
@@ -60,18 +59,10 @@ These steps have to be performed before starting to use the openBOS&reg; APIs:
     - set up physically in your building
     - commissioned via the local web interface / tool
     - connected to a myABB account
-3.	Create a local user on your Building edge device
-    - which has the rights to use the Cloud and API
-    - which has the same email address as the myABB account you are using
-4.	Make sure that your Building edge device is registered and equipped with the right licenses here: <a href="https://buildings.ability.abb" target="_blank">https://buildings.ability.abb</a>
 
-Visit <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a> by logging into the page via your myABB account.
-
-<img src="assets/openbos-documentation/static/images/startDeviceMap.png" height="463" width="815"/>
+Visit <a href="https://buildings.ability.abb" target="_blank">https://buildings.ability.abb</a> by logging into the page via your myABB account.
 
 Here you find your openBOS&reg; Building edge / gateway and you may configure and manage it.
-
-# Access openBOS API via cloud
 
 ## Create a new application in the ABB Developer Portal
 Log into the ABB Developer Portal with your myABB credentials
@@ -79,17 +70,21 @@ Log into the ABB Developer Portal with your myABB credentials
 
 - Click on Applications and press Create Application
 
-<img src="assets/openbos-documentation/static/images/startLogin.png" height="362" width="620"/>
+![Create Application](assets/openbos-documentation/static/images/startLogin.png)
 
 - Enter the necessary data for your application and your preferred redirect URLs
   - Be sure that you select the option "Building Management"
   - Press Create Application
 
-<img src="assets/openbos-documentation/static/images/startApplicationDetails.png" height="400" width="575"/>
+![Application Details](assets/openbos-documentation/static/images/startApplicationDetails.png)
 
  - After the application has been successfully created, you can find your required data to access the API for the first time
+ - You must configure the RedirectURI depending of the application type you will use
+     - Example : for a Single Page you will have to set the RedirectURI in the Single Page textbox
 
-<img src="assets/openbos-documentation/static/images/startAccessAPI.png" height="417" width="714"/>
+The concept of RedirectURI is used in OAuth2.0 to ensure that the sensitive data of the authentication are retrieved only to a well known URI. You can find more information at [OAuth 2.0](https://www.oauth.com/oauth2-servers/redirect-uris/)
+
+![Application OAuth](assets/openbos-documentation/static/images/startAccessAPI.png)
 
  - You can try out our API right away inside our ABB Developer Portal in section “API reference”
    - Click on “Building Management“ tag at the bottom of the left side
@@ -97,82 +92,29 @@ Log into the ABB Developer Portal with your myABB credentials
    - Set the edge identifier to communicate with.(NOTE : Use `demonstrationEdge1` to Try Out against the demonstration edge)
    - Click “Try out”
 
-<img src="assets/openbos-documentation/static/images/startTryOut.png" height="600" width="800"/>
+![Postman](assets/openbos-documentation/static/images/startTryOut.png)
 
 Start using your first calls to get data from openBOS&reg;.
 
-## Postman environment for cloud
+# Postman environment to test the API
 
- - Collect the `gwid` of your Building edge from the cloud portal
+NOTE: default values are to target the "demonstrationEdge1" edge.
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14996509-540942d1-78aa-45de-80c3-e854616aeae4?action=collection%2Ffork&collection-url=entityId%3D14996509-540942d1-78aa-45de-80c3-e854616aeae4%26entityType%3Dcollection%26workspaceId%3Dea90c3d1-21af-4177-8e72-f21b5ed12326)
+
+## How to start with postman
+
+ - Retrieve the gwid of your edge from the cloud portal
    - Connect to <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a>
    - Click on the detail of an edge to extract its unique identifier (aka: `gwid`)
- - Collect the client_id of your application declared in <a href="https://developers.connect.abb.com/application" target="_blank">https://developers.connect.abb.com/application</a>
- - Configure your Application to have the Single Page Application set to `https://oauth.pstmn.io/v1/callback`
- - Open Postman and import the collection <a href="assets/openbos-documentation/static/images/openBOS Ontology Cloud Api.postman_collection.json" target="_blank">Download openBOS Postman API collection for cloud</a>
- - Select the new imported collection
- - Click on `...` and select `Edit`
+ - Click on the Run in Postman button
+ - It will fork in your workspace the openBOS postman collection
+ - Click on `...` next to the imported collection and select `Edit`
    - Select the `Authorization` tab
-   - Set the client_id to the one you previously collect
+   - Set the Client ID to the one that matches the application you have created in the cloud developer portal. (Refers to chapter "How to connect a Building Edge?" for more details)
    - Select the Variable tab
    - Set the `gwid` to the id you retrieved from the step above.
    - Comeback to the `Authorization` tab
    - Scroll down and press `Get New Access Token`
    - Follow the authentication step
- - You can then select other endpoints to test them
-
-## Swagger environment for cloud
-
- - The swagger is accessible from [there](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/InfoELSBIotEcoSystem/openBOS-API-Doc/main/assets/openbos-documentation/static/images/openBOS-swagger.json)
- - As the swagger editor does not support PKCE out-of-the-box this display will be for reference only
-
-If you want to use a swagger editor locally to perform the tests you will need to follow these steps:
- - Collect the `gwid` of your Building edge from the cloud portal
-   - Connect to <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a>
-   - Click on the detail of an edge to extract its unique identifier (aka: `gwid`)
- - Collect the client_id of your application declared in <a href="https://developers.connect.abb.com/application" target="_blank">https://developers.connect.abb.com/application</a>
- - Configure your Application to have the Single Page Application set to `http://localhost:3000/oauth2-redirect.html`
-
- - Download [swagger-ui](/assets/openbos-documentation/static/images/swagger-ui-PKCE.zip)
- - Extract it to a local folder
- - Starts a command-line
-  ```bash
-      npm install
-      npm start
-  ```
- - Navigate to `http://localhost:3000/`
- - Click on Authorize
- - Then you can then select other endpoints to test them
-
-# Direct access openBOS API on local network
-
-## Introduction
- - On a local network the SmartEdge API is accessible through `http://ipaddress`
- - The local authentication scheme is using login-password with then further usage of Bearer json token
-
-## Postman environment for local access
-
- <a href="assets/openbos-documentation/static/images/openBOS Ontology Local Api.postman_collection.json" target="_blank">Download openBOS Postman API collection for local</a>
-
- - Open Postman and import the collection
- - Select the imported collection
- - Click on `...` and select `Edit`
- - Navigates to the Variables definition tab
- - Change the `{{baseUrl}}` to the address of your Building edge locally accessible
- - Select the route POST - Get Authentication token
-   - Edit the body and set your credentials
-   - Press Send
-     - If OK then the token will be stored for subsequent calls
  - You can then select other routes to test them
-
-## Swagger environment for local access
-
- - When using a local Building edge a swagger is directly embedded in the device
- - The swagger is accessible from `http://ipaddress/swagger`
- - To authenticate:
-   - Browse to the endpoint POST /api/v1/ontology/authentication
-   - From the result extract the token
-   - Click on the `Authorize` button
-     - set in the text field, "Bearer `access-token`" (where access-token is the valid result from the previous authentication request)
-     - Press `Authorize` to register 
- - You can then select other endpoints to test them
-
