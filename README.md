@@ -103,16 +103,29 @@ NOTE: default values are to target the "demonstrationEdge1" edge.
 
 ## How to start with postman
 
- - Retrieve the gwid of your edge from the cloud portal
-   - Connect to <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a>
-   - Click on the detail of an edge to extract its unique identifier (aka: `gwid`)
  - Click on the Run in Postman button
  - It will fork in your workspace the openBOS postman collection
- - Click on `...` next to the imported collection and select `Edit`
-   - Select the `Authorization` tab
-   - Set the Client ID to the one that matches the application you have created in the cloud developer portal. (Refers to chapter "How to connect a Building Edge?" for more details)
-   - Select the Variable tab
-   - Set the `gwid` to the id you retrieved from the step above.
+
+ - Authorization:
+   - Click on `...` next to the imported collection and select `Edit`
+     - Select the `Authorization` tab
+     - Set the Client ID to the one that matches the application you have created in the cloud developer portal. (Refers to chapter "How to connect a Building Edge?" for more details)
+     - Scroll down and press `Get New Access Token`
+     - Follow the authentication step
+     - And finally click on `Use Token` to store the token for the next calls
+
+  - Select the target edge
+    - Option 1 : Retrieve the list of edges you have in your account through API
+      - In the postman collection selects the "Get my edges" entry and press "Send"
+      - You will have the list of all edges that are assigned to you
+      - Keep the "gatewayId" of the edge you want to connect to
+    - Option 2 : Retrieve the list of edges you have in your account using the portal
+      - Connect to <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a>
+      - Click on the detail of an edge to extract its unique identifier (aka: `gatewayId`)
+    - To finally set the gatewayId
+     - In Postman / openBOS How tos / ... / Variables tab
+     - set the variable gwid to the "gatewayId" you previously get back
+     - and save
    - Comeback to the `Authorization` tab
    - Scroll down and press `Get New Access Token`
    - Follow the authentication step
