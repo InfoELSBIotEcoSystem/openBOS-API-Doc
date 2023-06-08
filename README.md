@@ -129,4 +129,4 @@ NOTE: default values are to target the "demonstrationEdge1" edge.
    - Comeback to the `Authorization` tab
    - Scroll down and press `Get New Access Token`
    - Follow the authentication step
- - You can then select other routes to test them
+  - You can then select other routes to test them
