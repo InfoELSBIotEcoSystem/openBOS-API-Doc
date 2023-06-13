@@ -18,8 +18,8 @@
   - [Physical device management](content/40_mainObjects/100_physicalDevice.md)
   - [Handle automation functions](content/40_mainObjects/110_automation.md)
     - [Alarm functions](content/40_mainObjects/111_alarms.md)
-    - [Handle automation functions](content/40_mainObjects/112_trends.md)
-    - [Handle automation functions](content/40_mainObjects/113_schedules.md)
+    - [Trends functions](content/40_mainObjects/112_trends.md)
+    - [Schedulers functions](content/40_mainObjects/113_schedules.md)
   - [Event driven subscription to prevent from polling](content/30_concept/130_eventDriven.md)   
   - [Advanced filtering for collections](content/40_mainObjects/140_advancedFiltering.md)   
 - Samples
@@ -39,10 +39,10 @@
 - References
   - [Postman environment](content/60_references/10_postman.md)
   - [Ontology Instances objects](content/60_references/30_schemas.md)
-  - [Ontology users objects](content/60_references/40_usersObjectsTags.md)
-  - [Ontology building spaces](content/60_references/50_buildingSpacesTags.md)
-  - [Ontology datapoints objects](content/60_references/60_datapointsTags.md)
-  - [Ontology assets objects](content/60_references/70_assetsTags.md)
+  - [Ontology users tags](content/60_references/40_usersObjectsTags.md)
+  - [Ontology building and spaces tags](content/60_references/50_buildingSpacesTags.md)
+  - [Ontology datapoints tags](content/60_references/60_datapointsTags.md)
+  - [Ontology assets tags](content/60_references/70_assetsTags.md)
 - Appendix
   - [Glossary](content/70_appendix/10_glossary.md)
 
