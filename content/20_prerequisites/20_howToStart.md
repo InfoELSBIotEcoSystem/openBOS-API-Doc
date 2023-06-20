@@ -1,4 +1,4 @@
-# How to connect a Building edge openBOS&reg; device to ABB cloud and get ready to using the open APIs?
+# How to connect a Building edge?
 
 ## Prerequisites
 These steps have to be performed before starting to use the openBOS&reg; APIs:

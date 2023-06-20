@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "listName": "Introduction to openBOS® for developers",
+    "url": "10_introduction/_index.md",
+    "innerList": []
+  },
+  {
+    "id": 2,
+    "listName": "Prerequisites",
+    "url": "20_prerequisites/_index.md",
+    "innerList": [
+      {
+        "id": 1,
+        "title": "Limitations and constraints",
+        "url": "20_prerequisites/10_limitations.md"
+      },
+      {
+        "id": 2,
+        "title": "How to connect a Building edge?",
+        "url": "20_prerequisites/20_howToStart.md"
+      },
+      {
+        "id": 3,
+        "title": "I don't know if I need to register",
+        "url": "20_prerequisites/40_needToRegister.md"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "listName": "Concept of the ontology",
+    "url": "30_concept/_index.md",
+    "innerList": [
+      {
+        "id": 1,
+        "title": "Unique app for local and cloud use",
+        "url": "30_concept/010_uniqueApp.md"
+      },
+      {
+        "id": 2,
+        "title": "Several accessibilities level",
+        "url": "30_concept/020_accessLevel.md"
+      },
+      {
+        "id": 3,
+        "title": "Connection and authentication",
+        "url": "30_concept/030_authentication.md"
+      },
+      {
+        "id": 4,
+        "title": "Listing and accessing my BuildingEdge via the Cloud API",
+        "url": "30_concept/035_cloud_access.md"
+      },
+      {
+        "id": 5,
+        "title": "Tags: a core concept to understand",
+        "url": "30_concept/040_tags.md"
+      },
+      {
+        "id": 6,
+        "title": "Basic objects: DEVICE, ASSET and ZONES",
+        "url": "30_concept/050_basicObjects.md"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "listName": "Main objects description",
+    "url": "40_mainObjects/_index.md",
+    "innerList": [
+      {
+        "id": 1,
+        "title": "Users objects",
+        "url": "40_mainObjects/060_usersObjects.md"
+      },
+      {
+        "id": 2,
+        "title": "Sites description: the building infrastructure",
+        "url": "40_mainObjects/070_buildingSpace.md"
+      },
+      {
+        "id": 3,
+        "title": "ASSET management",
+        "url": "40_mainObjects/080_buildingAsset.md"
+      },
+      {
+        "id": 4,
+        "title": "Datapoints management ",
+        "url": "40_mainObjects/090_datapoints.md"
+      },
+      {
+        "id": 5,
+        "title": "Device management",
+        "url": "40_mainObjects/100_physicalDevice.md"
+      },
+      {
+        "id": 6,
+        "title": "Automation functions",
+        "url": "40_mainObjects/110_automation.md"
+      },
+      {
+        "id": 7,
+        "title": "Automation functions - Alarming",
+        "url": "40_mainObjects/111_alarms.md"
+      },
+      {
+        "id": 8,
+        "title": "Automation functions - Trending",
+        "url": "40_mainObjects/112_trends.md"
+      },
+      {
+        "id": 9,
+        "title": "Automation functions - Scheduling",
+        "url": "40_mainObjects/113_schedules.md"
+      },
+      {
+        "id": 10,
+        "title": "Event driven subscription to prevent from polling",
+        "url": "40_mainObjects/130_eventDriven.md"
+      },
+      {
+        "id": 11,
+        "title": "Advanced filtering",
+        "url": "40_mainObjects/140_advancedFiltering.md"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "listName": "Samples",
+    "url": "50_samples/_index.md",
+    "innerList": [
+      {
+        "id": 1,
+        "title": "Connect to the API from the cloud (oBaaS)",
+        "url": "50_samples/10_authenticateToCloud.md"
+      },
+      {
+        "id": 2,
+        "title": "Manage users",
+        "url": "50_samples/20_checkUsers.md"
+      },
+      {
+        "id": 3,
+        "title": "Manage property",
+        "url": "50_samples/30_discoverProperty.md"
+      },
+      {
+        "id": 4,
+        "title": "Manage datapoints and subscriptions",
+        "url": "50_samples/40_manageDatapoints.md"
+      },
+      {
+        "id": 5,
+        "title": "Switch on all lights of a specific office in a building",
+        "url": "50_samples/50_switchOnLights.md"
+      },
+      {
+        "id": 6,
+        "title": "Manage alarms",
+        "url": "50_samples/60_manageAlarms.md"
+      },
+      {
+        "id": 7,
+        "title": "Manage trend values on datapoint",
+        "url": "50_samples/70_manageTrends.md"
+      },
+      {
+        "id": 8,
+        "title": "Manage schedulers",
+        "url": "50_samples/80_manageSchedulers.md"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "listName": "References",
+    "url": "60_references/_index.md",
+    "innerList": [
+      {
+        "id": 1,
+        "title": "Postman environment",
+        "url": "60_references/10_postman.md"
+      },
+      {
+        "id": 2,
+        "title": "Ontology Template objects",
+        "url": "60_references/20_templateObjects.md"
+      },
+      {
+        "id": 3,
+        "title": "Schemas",
+        "url": "60_references/30_schemas.md"
+      },
+      {
+        "id": 4,
+        "title": "Associated tags with user objects",
+        "url": "60_references/40_usersObjectsTags.md"
+      },
+      {
+        "id": 5,
+        "title": "Tags for building spaces",
+        "url": "60_references/50_buildingSpacesTags.md"
+      },
+      {
+        "id": 6,
+        "title": "Associated tags with datapoints",
+        "url": "60_references/60_datapointsTags.md"
+      },
+      {
+        "id": 7,
+        "title": "Associated tags with functional block objects (assets)",
+        "url": "60_references/70_assetsTags.md"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "listName": "Appendix",
+    "url": "70_appendix/_index.md",
+    "innerList": [
+      {
+        "id": 1,
+        "title": "Glossary",
+        "url": "70_appendix/10_glossary.md"
+      }
+    ]
+  }
+]
