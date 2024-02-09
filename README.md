@@ -37,8 +37,8 @@
   - [How do I read trend value ?](content/50_samples/70_manageTrends.md)
   - [How do I manage schedulers ?](content/50_samples/80_manageSchedulers.md)
 - References
-  - [Postman environment](content/60_references/10_postman.md)
-  - [Ontology Instances objects](content/60_references/30_schemas.md)
+  - [Postman environment and endpoints](content/60_references/10_postman.md)
+  - [Ontology Instances objects (DTOs)](content/60_references/30_schemas.md)
   - [Ontology users tags](content/60_references/40_usersObjectsTags.md)
   - [Ontology building and spaces tags](content/60_references/50_buildingSpacesTags.md)
   - [Ontology datapoints tags](content/60_references/60_datapointsTags.md)
