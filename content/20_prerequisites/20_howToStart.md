@@ -1,19 +1,19 @@
-# How to connect a Building edge openBOS&reg; device to ABB cloud and get ready to using the open APIs?
+# How to connect a Building edge?
 
 ## Prerequisites
 These steps have to be performed before starting to use the openBOS&reg; APIs:
 
-1.	Register for a free myABB account
+-	Register for a free myABB account
     - Directly here: <a href="https://www.usermanagement.abb.com/account/Register" target="_blank">https://www.usermanagement.abb.com/account/Register</a>
     - Or on <a href="https://developers.connect.abb.com/getting-started" target="_blank">https://developers.connect.abb.com/getting-started</a> following the “Register” button
-2.	Ensure you have an openBOS&reg; Building edge gateway which is
+-	Ensure you have an openBOS&reg; Building edge gateway which is
     - set up physically in your building
     - commissioned via the local web interface / tool
     - connected to a myABB account
-3.	Create a local user on your Building edge device
+-	Create a local user on your Building edge device
     - which has the rights to use the Cloud and API
     - which has the same email address as the myABB account you are using
-4.	Make sure that your Building edge device is registered and equipped with the right licenses here: <a href="https://buildings.ability.abb" target="_blank">https://buildings.ability.abb</a>
+-	Make sure that your Building edge device is registered and equipped with the right licenses here: <a href="https://buildings.ability.abb" target="_blank">https://buildings.ability.abb</a>
 
 Visit <a href="https://buildings.ability.abb/portfolio" target="_blank">https://buildings.ability.abb/portfolio</a> by logging into the page via your myABB account.
 
