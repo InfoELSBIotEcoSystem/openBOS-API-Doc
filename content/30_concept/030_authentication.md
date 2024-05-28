@@ -7,7 +7,8 @@ To access the openBOS&reg; API, there are two ways:
 ## How to authenticate to the openBOS&reg; API
 
 ### Accessing Building edge openBOS&reg; via ABB Cloud
-In a cloud perspective workflow, you will already have registered as a developer on the ABB Developer Portal (<a href="https://developers.connect.abb.com/" target="_blank">https://developers.connect.abb.com/). From there you will already have created your application.
+
+In a cloud perspective workflow, you will already have registered as a developer on the ABB Developer Portal (<a href="https://developers.connect.abb.com/" target="_blank">https://developers.connect.abb.com/). From there you will already have created your application. [How to connect to a Building edge?](/README.md#create-a-new-application-in-the-abb-developer-portal)
 
 Available authentication workflow are:
  - OAuth 2.0 Grant type Authorization code
